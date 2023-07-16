@@ -5,7 +5,7 @@
 ## Descripción del proyecto
 
 Fuí contratado por una empresa de telecomunicaciones Argentina para realizar un análisis del panorama de las telecomunicaciones, específicamente internet en Argentina a través de datasets del gobierno argentino.
- 
+
 El análisis incluye un EDA realizado en Python, creación de una base de datos SQL con los datasets limpios obtenidos del EDA, la realización de un informe con las conclusiones obtenidas del análisis y un dashboard interactivo para explicar los KPI sugeridos.
 
 ## Tecnologías utilizadas
@@ -22,7 +22,7 @@ El repositorio cuenta con las siguientes carpetas y archivos:
 - [Datasets](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/tree/main/Datasets "Datasets"): donde se encuentran todos los datasets proporcionados para realizar el proyecto.
 - [Datasets_PBI](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/tree/main/Datasets_PBI "Datasets_PBI"): donde se encuentran los datasets utilizados para generar el dashboard y realizar el EDA.
 - [Gráficos](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/tree/main/Graficos "Gráficos"): se encuentran los gráficos más importantes obtenidos al realizar el EDA.
-- Notebooks: es la carpeta que contiene el notebook donde se realizó el EDA.
+- [Notebooks](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/tree/main/Notebooks): es la carpeta que contiene el notebook donde se realizó el EDA.
 - README.md: es el archivo donde está toda la información del proyecto, incluyendo el informe con los KPI propuestos, los insights y conclusiones obtenidos de los datos.
 
 ## Informe
@@ -49,14 +49,16 @@ En el proyecto se mostrará el panorama actual de las telecomunicaciones en Arge
  <b>Desarrollo</b>
 </h4>
 
+#### Panorama General
+
 <div style="text-align: justify"><p style="text-align: justify;">
-El proyecto fue realizado utilizando los datos suministrados por la compañía. Los datos pertenecen al [ENACOM](https://datosabiertos.enacom.gob.ar/home), el cual es el Ente Nacional de Comunicaciones de Argentina. El enfoque principal del análisis fueron los datos pertenecientes a Internet, pero se incluyeron algunos datos de las otras tecnologías de telecomunicación: televisión, telefonía fija y móvil.
+El proyecto fue realizado utilizando los datos suministrados por la compañía. Los datos pertenecen al ENACOM, el cual es el Ente Nacional de Comunicaciones de Argentina. El enfoque principal del análisis fueron los datos pertenecientes a Internet, pero se incluyeron algunos datos de las otras tecnologías de telecomunicación: televisión, telefonía fija y móvil.
 
 El análisis exploratorio de los datos fue realizado utilizando el lenguaje de programación Python, específicamente los módulos requests para obtener la información de la API de ENACOM, Pandas para la creación de los DataFrame y Matplotlib y Seaborn para la creación de los gráficos que permitieron obtener los insights y conclusiones. Para el motor de base de datos se utilizó MySQL, creando el servidor y las tablas desde Python usando el módulo pymysql.
 
 Antes de comenzar a analizar los datos del ENACOM, se buscó la población de las diferentes provincias de Argentina para ayudar a entender la distribución poblacional y a obtener los diferentes insights y conclusiones. Con los datos de la población se realizó el siguiente gráfico:
 
-![Poablacion_Argentina](Link de la imagen)
+![Población](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/16ee7eac-fc51-4dba-b126-b12322e2a531)
 
 Vemos en el gráfico que las provincias de Buenos Aires, Córdoba y Santa Fé son las más pobladas, mientras que las provincias de Tierra del Fuego, Santa Cruz y La Pampa son las menos pobladas. Este es el comportamiento de esperarse, pues las provincias más pobladas son las más cercanas a los centros urbanos más grandes.
 
@@ -64,7 +66,7 @@ Una vez observada la distribución poblacional se procedió a realizar el análi
 
 Para poder realizar el análisis correctamente y poder determinar los mejores KPI, primero fue necesario observar el comportamiento general del Internet. Para ello se realizó una comparación de la cantidad de usuarios del Internet de banda angosta y del banda ancha anualmente, desde el primer trimestre del 2014 hasta el tercer trimestre del 2022:
 
-![Banda_ancha_VS_Banda_angosta](Link de la imagen)
+![Comparacion_usuarios_por_banda](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/0240f55e-b7cf-40ec-b4a4-78a11148a0eb)
 
 En el gráfico se observa la gran diferencia en la cantidad de usuarios: los de banda angosta apenas llegaron, en el 2014, a 150 mil y van disminuyendo a lo largo de los años, mientras que los de banda ancha van aumentando a lo largo de los años con un pico de 4 millones en el 2021. También se observa una disminución en la cantidad de usuarios para banda ancha en el 2022, pero se debe recordar que no están incluidos los datos del cuarto semestre de ese año, por lo que es de esperar que al incluirlos aumenten aún más.
 
@@ -72,7 +74,7 @@ Este gráfico nos muestra la gran tendencia actual de los usuarios: prefieren el
 
 Luego, se realizó la comparación entre la cantidad de usuarios con acceso a Internet de banda ancha y la cantidad de hogares conectados a Internet cada 100 hogares para el año 2022, obteniéndose el siguiente gráfico:
 
-![Comparación_Usuarios_Provincia_Hogares](Link de la imagen)
+![Comparacion_usuarios_provincia_100_hogares](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/7a1a5261-bdcb-474e-9a9f-012c7a48c69b)
 
 Es importante mencionar que la cantidad de accesos cada 100 hogares se basa en la cantidad total de la población, se considera como un porcentaje de la población que tiene acceso a Internet. Este gráfico comparativo es muy importante porque vemos, por ejemplo, que la provincia de Buenos Aires es la que tiene mayor cantidad de usuarios con acceso a Internet, pero es apenas la quinta provincia en cantidad total de hogares conectados cada 100 hogares. De igual forma, Tierra del Fuego es la antepenúltima provincia con cantidad total de usuarios que tienen acceso a Internet banda ancha, pero es la segunda en accesos cada 100 hogares.
 
@@ -84,7 +86,7 @@ Es importante observar aquellas provincias con pocos accesos a Internet cada 100
 
 Se realizó un gráfico comparativo de televisión satelital, por suscripción e Internet de banda ancha de forma anual:
 
-![television_vs_internet](link de la imagen)
+![television_vs_internet](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/b8b47596-284d-4bde-8791-5fca59a701b2)
 
 Se puede ver como a medida que pasan los años, la cantidad de usuarios que utilizan televisión disminuye, mientras que la de Internet aumenta. Además, la diferencia en el total de usuarios de Internet es mayor (40 millones) que la de los servicios de televisión (30 millones) para el año 2021. 
 
@@ -94,7 +96,7 @@ La gran disminución en la cantidad de suscriptores del servicio de televisión 
 
 Se realizó un gráfico anual de la cantidad de usuarios de telefonía fija para los diferentes uso que se le da (hogares, comercios, gobiernos, otros):
 
-![fija](Link de la imagen)
+![telefonia_fija](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/db9332a6-de0e-40b0-b554-7d0ea68bd2ac)
 
 Se observa que el comportamiento es igual al de la televisión, ha medida que pasan los años, la cantidad de usuarios de telefonía fija disminuye constantemente.
 
@@ -104,25 +106,25 @@ Esto guarda relación con las tendencias actuales, donde las personas están mig
 
 Al igual que en los casos anteriores, se realizó un gráfico que muestra la cantidad de usuarios de forma anual para los clientes de telefonía móvil prepago y postpago:
 
-![movil](link de la imagen)
+![telefonia_movil](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/00886bf8-eefd-49c8-bf5a-307dcd0d70f3)
 
 En este caso, a diferencia de la televisión y telefonía fija, la cantidad total de usuarios se ha mantenido prácticamente constante a lo largo de los años. Esto se debe a lo que ya se mencionó, los teléfonos móviles tienen grandes características que los hacen interesantes para los usuarios, además de que les permiten matenerse conectados e informados en cualquier lugar en cualquier momento.
 
 Con todo lo antes expuesto, la compañía puede considerar aplicar el siguiente KPI:
 
-**Cantidad de usuarios ganados por provincia:** este KPI permitirá medir la eficacia de la empresa en captar nuevos usuarios en las provincias con menor acceso a un buen servicio de Internet. De acuerdo a los datos y las gráficas mostradas, se puede definir el KPI:
+1- **Cantidad de usuarios ganados por provincia:** este KPI permitirá medir la eficacia de la empresa en captar nuevos usuarios en las provincias con menor acceso a un buen servicio de Internet. De acuerdo a los datos y las gráficas mostradas, se puede definir el KPI:
 
 "Aumentar la cantidad de usuarios con acceso a un buen servicio de Internet en 5%, de forma anual, enfocándose especialmente en las provincias que tengan menor cantidad de accesos."
 
 El KPI se medirá sumando los usuarios nuevos que se ganen en cada una de las provincias en un año. Se toma el 5 % de forma anual, porque es lo que aumentan, en promedio, la cantidad de usuarios que utilizan Internet de banda ancha en un año a nivel nacional.
 </p></div>
 
-##### Velocidades y Tecnologías
+#### Velocidades y Tecnologías
 
 <div style="text-align: justify"><p style="text-align: justify;">
 Una vez analizado el panorama general nacional y provincial de las conexiones a Internet en Argentina, veamos como se comporta el total de usuarios con acceso a Internet en función de diferentes rangos de velocidades de conexión. Para ello se utilizó un gráfico de líneas con progreso anual a nivel nacional:
 
-![Acceso_Velocidades](Link de la imagen)
+![Usuarios_rangos_velocidad_anual](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/311f05af-a0b7-48c6-aec3-8fe96b957dcd)
 
 En el gráfico observamos como a medida que pasan los años, la cantidad de usuarios de internet con velocidades mayores a 30 Mbps han ido en aumento y la cantidad de usuarios que utilizan internet con velocidades entre 6 y 10 Mbps se ha mantenido constante, la cantidad de usuarios en todas las demás velocidades ha disminuido. La tendencia observada en el gráfico muestra las necesidades actuales de los usuarios por adquirir Internet con las mejores velocidades de conexión posibles. 
 
@@ -136,13 +138,13 @@ Por todo lo mencionado, la compañía debe enfocarse en ofertar planes de Intern
 
 Al haber observado el comportamiento de los diferentes rangos de velocidad a nivel nacional, uno se puede preguntar: ¿Cuál es el comportamiento de los rangos de velocidad por provincia? Para responder está pregunta, se creó un gráfico de barras que muestra la cantidad de usuarios con acceso a Internet por velocidad para el año 2022, tomando en cuenta solo los rangos de velocidad de interés, es decir, de 6 a 10 Mbps y mayores a 30 Mbps:
 
-![Velocidad_provincia](Link de la imagen)
+![Velocidad_por_provincia](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/23b98eea-b2e0-498f-b48f-53dd0c6716e7)
 
 El gráfico muestra que la mayoría de las provincias cuenta con Internet en las velocidades de estudio, es decir, de 6 a 10 Mbps y mayores a 30 Mbps. Además, permite observar como las provincias de San Luis o Tierra del Fuego cuentan con poca cantidad de usuarios para las velocidades mencionadas. La compañía debe enfocar sus esfuerzos en mejorar la velocidad de conexión de Internet y brindar planes accesibles a los usuarios en las provincias que presenten menor cantidad de usuarios conectados con las velocidades mencionadas y poder atraer y ganar una mayor cantidad de usuarios.
 
 Es posible crear un KPI a partir de la información de la velocidad. Sin embargo, uno puede llegar a preguntarse: ¿Existe alguna relación entre las velocidades de conexión y la tecnología de Internet? Para responder está pregunta, primero es necesario analizar el comportamiento de las diferentes tecnologías de Internet a nivel nacional de forma anual:
 
-![Acceso_tecnología](Link de la imagen)
+![Usuarios_tecnologia_anual](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/234f67d8-1f15-4369-aa18-9ff25dabd725)
 
 En el gráfico se observa el aumento constante en la cantidad de usuarios que utilizan fibra óptica y Cablemodem anualmente y la disminución constante de la cantidad de usuarios en las otras tecnologías, especialmente en ADSL, la cual fue por mucho tiempo la tecnología más utilizada. Solo en el último año se observa una disminución en la cantidad de usuarios de Cablemodem y puede debeserse a la falta de los datos en el último trimestre del año 2022.
 
@@ -152,7 +154,7 @@ Por lo mencionado, la compañía debe enfocarse en ofrecer Internet con las mejo
 
 Al igual que con la velocidad, se observa el comportamiento en cada provincia de las tecnologías más importantes (Cablemodem y fibra óptica) para el año 2022:
 
-![Tecnologia_provincia](Link de imagen)
+![tecnologia_por_provincia](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/b7c8750c-f310-40a1-b58c-adb544f6f1a6)
 
 Se puede observar que para el 2022 el Cablemodem es la tecnología más utilizada en casi todas las provincias de Argentina. Además, al comparar el gráfico con el de la población por provincia, se ve que la fibra óptica se encuentra principalmente en las provincias más pobladas. Lo observado en el gráfico tiene sentido, pues es la tendencia que se ha visto en todo el análisis: los usuarios están migrando a mayores velocidades por lo que necesitan las tecnologías que las suministren, y estas son Cablemodem y fibra óptica.
 
@@ -162,7 +164,7 @@ Por último, el hecho de que la fibra óptica se encuentre en los centros más p
 
 Una vez realizado el análisis a la cantidad de usuarios para la velocidad y la tecnología de forma individual, se realiza un mapa de calor para observar si existe alguna relación entre ellas:
 
-![Mapa_de_calor](Link de la imagen)
+![Correlacion_tecnologia_velocidad](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/assets/113273616/607d818b-7c80-4620-abfb-1a0b7050757d)
 
 En el mapa de calor se observan algunas correlaciones fuertes entre: velocidades mayores a 30 Mbps y fibra óptica, velocidades entre 1 a 6 Mbps y ADSL y entre 6 a 10 Mbps y ADSL y Cablemodem.
 
@@ -170,7 +172,7 @@ Estas correlaciones ayudan a confirmar lo expuesto en los gráficos anteriores, 
 
 Con todo el análisis realizado para la velocidad y tecnología, se plantea el siguiente KPI:
 
-**Porcentaje de usuarios que adquieren internet de alta velocidad y tecnologías avanzadas por provincia:** este KPI reflejará el enfoque de la empresa en ofrecer el mejor servicio de Internet en el país. Con el análisis realizado, se puede definir el KPI de la siguiente forma:
+2- **Porcentaje de usuarios que adquieren internet de alta velocidad y tecnologías avanzadas por provincia:** este KPI reflejará el enfoque de la empresa en ofrecer el mejor servicio de Internet en el país. Con el análisis realizado, se puede definir el KPI de la siguiente forma:
 
 "El objetivo es aumentar la cantidad de usuarios que utilizan fibra óptica o Cablemodem y adquieran planes de Internet de altas velocidades en un 14% anualmente, con especial enfoque en las provincias que tengan las velocidades de internet más bajas y cuenten con poco acceso a las mejores tecnologías."
 
@@ -179,21 +181,18 @@ Se toma el valor de 14%, pues es el promedio del aumento anual de Cablemodem que
 El KPI se medirá sumando la cantidad total de usuarios que adquieran los planes de internet de alta velocidad con las tecnologías Cablemodem y fibra óptica por provincia, divididos entre el número total de usuarios de internet de la compañía en esa provincia y multiplicado por 100 para obtener el porcentaje.
 
 Este KPI permite medir el éxito de la empresa en proveer servicios de calidad al unificar la velocidad y la tecnología. También permite identificar las provincias donde se está logrando un mayor impacto y en donde es necesario realizar mayores esfuerzos para captar más usuarios.
-</p></div>
 
-**Tasa de retención de usuarios:** este KPI refleja la capacidad de la empresa para retener a los usuarios que han optado por sus servicios, en este caso, servicios de Internet de alta velocidad con las mejores tecnologías del mercado. Se puede definir de la siguiente forma:
+3- **Tasa de retención de usuarios:** este KPI refleja la capacidad de la empresa para retener a los usuarios que han optado por sus servicios, en este caso, servicios de Internet de alta velocidad con las mejores tecnologías del mercado. Se puede definir de la siguiente forma:
 
 "Ofertar Internet accesible de la más alta calidad (alta velocidad y las últimas tecnologías), que permita mantener una tasa de retención de clientes de, al menos, 80% de forma anual a nivel nacional"
 
-De acuerdo a algunas [investigaciones realizadas](https://www.paddle.com/resources/industry-retention-rates), el valor de 80% es el valor promedio de tasa de retención en industrias de telecomunicaciones, por lo que se establece como el valor deseado para la empresa.
+De acuerdo a [investigaciones realizadas](https://www.paddle.com/resources/industry-retention-rates), el valor de 80% es el valor promedio de tasa de retención en industrias de telecomunicaciones, por lo que se establece como el valor deseado para la empresa.
 
 El KPI se medirá restando el número total de usuarios al final del año menos el número de usuarios nuevos, todo dividido entre el número total de usuarios al comienzo de ese año, multiplicado por 100 para obtener la tasa como porcentaje.
 
 Este KPI permite evaluar los esfuerzos de la empresa en ofertar un servicio de calidad que satisfaga las necesidades de los usuarios actuales que tiene la industria. Le permite saber si está yendo en la dirección correcta al apostar por nuevas tecnologías e Internet más rápido.
 
 Es importante señalar que, además de contar con el servicio de Internet de mejor calidad a nivel nacional, es necesario que la empresa cuenten con un servicio al cliente de calidad y tenga precios competitivos para poder tener una elevada tasa de retención.
-</p></div>
-
 </p></div>
 
 <h4 align='center'>
