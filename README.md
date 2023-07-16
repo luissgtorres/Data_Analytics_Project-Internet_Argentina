@@ -54,7 +54,7 @@ En el proyecto se mostrará el panorama actual de las telecomunicaciones en Arge
 <div style="text-align: justify"><p style="text-align: justify;">
 El proyecto fue realizado utilizando los datos suministrados por la compañía. Los datos pertenecen al ENACOM, el cual es el Ente Nacional de Comunicaciones de Argentina. El enfoque principal del análisis fueron los datos pertenecientes a Internet, pero se incluyeron algunos datos de las otras tecnologías de telecomunicación: televisión, telefonía fija y móvil.
 
-El análisis exploratorio de los datos fue realizado utilizando el lenguaje de programación Python, específicamente los módulos requests para obtener la información de la API de ENACOM, Pandas para la creación de los DataFrame y Matplotlib y Seaborn para la creación de los gráficos que permitieron obtener los insights y conclusiones. Para el motor de base de datos se utilizó MySQL, creando el servidor y las tablas desde Python usando el módulo pymysql.
+El análisis exploratorio de los datos fue realizado utilizando el lenguaje de programación Python, específicamente los módulos requests para obtener la información de la API de ENACOM, Pandas para la creación de los DataFrame y Matplotlib y Seaborn para la creación de los gráficos que permitieron obtener los insights y conclusiones. Para el motor de base de datos se utilizó MySQL, creando la base de datos y las tablas desde Python usando el módulo pymysql.
 
 Antes de comenzar a analizar los datos del ENACOM, se buscó la población de las diferentes provincias de Argentina para ayudar a entender la distribución poblacional y a obtener los diferentes insights y conclusiones. Con los datos de la población se realizó el siguiente gráfico:
 
