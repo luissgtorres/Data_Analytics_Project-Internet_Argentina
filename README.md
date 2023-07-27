@@ -24,7 +24,7 @@ El repositorio cuenta con las siguientes carpetas y archivos:
 - [Gráficos](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/tree/main/Graficos "Gráficos"): se encuentran los gráficos más importantes obtenidos al realizar el EDA.
 - [Notebooks](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/tree/main/Notebooks): es la carpeta que contiene el notebook donde se realizó el EDA y el notebook donde se realizó la conexión a la base de datos.
 - [BD](https://github.com/luissgtorres/Data_Analytics_Project-Internet_Argentina/tree/main/BD): donde se encuentra el archivo de la base de datos.
-- Dashboard: es el archivo de Power BI donde se encuentra el dashboard realizado.
+- Dashboard.pbix: es el archivo de Power BI donde se encuentra el dashboard realizado.
 - README.md: es el archivo donde está toda la información del proyecto, incluyendo el informe con los KPI propuestos, los insights y conclusiones obtenidos de los datos.
 
 ## Informe
