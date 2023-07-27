@@ -213,4 +213,4 @@ Como último comentario, es importante que las acciones que se tomen sean en bas
 
 ## Autor
 
-[Luis Torres](luisgtorres16@gmail.com)
+[Luis Torres](https://www.linkedin.com/in/luis-gerardo-torres-aponte/)
